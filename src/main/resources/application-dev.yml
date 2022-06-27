@@ -1,0 +1,52 @@
+spring:
+  application:
+    name: canalDemo
+  redis:
+    database: 5
+    host: 192.168.101.79
+    maxIdle: 100
+    maxTotal: 100
+    maxWaitMillis: 10000
+    minIdle: 50
+    password: fa2dd47aef2b795aa7ec2d180f850974
+    port: 10378
+    timeout: 30000
+  datasource:
+    carshare:
+      driver-class-name: com.mysql.jdbc.Driver
+      url: jdbc:mysql://192.168.101.79:3306/carshare?zeroDateTimeBehavior=convertToNull&autoReconnect=true&useUnicode=true&characterEncoding=utf-8
+      username: root
+      password: test
+    connectionTimeout: 60000
+    minimum-idle: 5
+    maximum-pool-size: 50
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 30MB
+      max-request-size: 100MB
+
+
+sys:
+  cacheExpireDay: 1
+  lockTimeoutSecond: 5
+  tryTimeoutSecond: 10
+
+mybatis:
+  mapper-locations: classpath:mapper/*
+
+logging:
+  config: classpath:logback-spring.xml
+  level:
+    com.chetuan.carshare.mapper: debug
+
+swagger:
+  enabled: true
+  pathMapping:
+
+
+myconfig:
+# default_user_photo: defaultUserPhoto.png
+  default_user_photo: https://suncars-1251117131.cos.ap-shanghai.myqcloud.com/customer/defaultUserPhoto.png
+  err_img: http://img.315che.com/upload/pic_default_big.png
+

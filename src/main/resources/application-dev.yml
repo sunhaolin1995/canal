@@ -35,10 +35,10 @@ sys:
 mybatis:
   mapper-locations: classpath:mapper/*
 
-logging:
-  config: classpath:logback-spring.xml
-  level:
-    com.chetuan.carshare.mapper: debug
+##logging:
+##  config: classpath:logback-spring.xml
+##  level:
+##    com.chetuan.carshare.mapper: debug
 
 swagger:
   enabled: true
